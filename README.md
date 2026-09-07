@@ -1,5 +1,1 @@
-<p align="center">
-  <a href="https://github.com/Alttrest/MINISUMO_ROBOT">
-    <img src="https://github-readme-svg-ten.vercel.app/api?username=Alttrest&repo=MINISUMO_ROBOT&theme=dark" alt="MINISUMO_ROBOT Stats" />
-  </a>
-</p>
+<div align="center">\n  <a href="https://github.com/Alttrest/MINISUMO_ROBOT">\n    <img src="readme.svg" alt="MINISUMO_ROBOT" width="100%"/>\n  </a>\n</div>\n
