@@ -1,27 +1,136 @@
-<svg width="800" height="300" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="800" height="300" rx="15" fill="#0D1117" stroke="#30363D" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811"/>
+      <stop offset="50%" stop-color="#0b1329"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulse {
+      0%, 100% { opacity: 0.8; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+    @keyframes scan {
+      0% { transform: translateY(0); opacity: 0.8; }
+      100% { transform: translateY(180px); opacity: 0; }
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .grid-bg { fill: url(#grid); }
+    .pulse-elem { animation: pulse 2.5s ease-in-out infinite; }
+  </style>
+
+  <rect width="1200" height="560" rx="16" fill="url(#bg)" stroke="#1e293b" stroke-width="1.5"/>
+  <rect width="1200" height="560" rx="16" class="grid-bg" />
+
+  <!-- Top Badge -->
+  <g transform="translate(60, 45)">
+    <rect width="200" height="26" rx="13" fill="#0f172a" stroke="#3b82f6" stroke-width="1"/>
+    <circle cx="15" cy="13" r="4" fill="#3b82f6" />
+    <text x="28" y="17" fill="#3b82f6" font-family="monospace" font-size="11" font-weight="700">AUTONOMOUS ROBOTICS</text>
+  </g>
+
+  <!-- Left Column: Project Identity & Specs -->
+  <g transform="translate(60, 115)">
+    <text x="0" y="38" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="40" font-weight="800" letter-spacing="-1">MINISUMO_ROBOT</text>
+    <text x="0" y="74" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15">Open-Source Autonomous EDU1 Platform • CAD &amp; Eagle PCB</text>
+
+    <!-- Stack Chips -->
+    <g transform="translate(0, 100)">
+      
+        <rect x="0" y="0" width="114" height="30" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="57" y="19" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="600">Embedded C</text>
+        
+        <rect x="126" y="0" width="141" height="30" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="196" y="19" text-anchor="middle" fill="#a855f7" font-family="monospace" font-size="12" font-weight="600">AVR / Arduino</text>
+        
+        <rect x="279" y="0" width="114" height="30" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="336" y="19" text-anchor="middle" fill="#10b981" font-family="monospace" font-size="12" font-weight="600">Fusion 360</text>
+        
+        <rect x="405" y="0" width="105" height="30" rx="6" fill="#0f172a" stroke="#1e293b"/>
+        <text x="457" y="19" text-anchor="middle" fill="#f59e0b" font-family="monospace" font-size="12" font-weight="600">Eagle PCB</text>
+        
+    </g>
+
+    <!-- Metrics Cards -->
+    <g transform="translate(0, 160)">
+      
+        <g transform="translate(0, 0)">
+          <rect width="145" height="60" rx="8" fill="#0f172a" stroke="#1e293b"/>
+          <text x="14" y="24" fill="#64748b" font-family="monospace" font-size="10">MECHANICS</text>
+          <text x="14" y="48" fill="#3b82f6" font-family="-apple-system, sans-serif" font-size="14" font-weight="700">Fusion 360 CAD</text>
+        </g>
+        
+        <g transform="translate(155, 0)">
+          <rect width="145" height="60" rx="8" fill="#0f172a" stroke="#1e293b"/>
+          <text x="14" y="24" fill="#64748b" font-family="monospace" font-size="10">ELECTRONICS</text>
+          <text x="14" y="48" fill="#10b981" font-family="-apple-system, sans-serif" font-size="14" font-weight="700">2-Layer PCB</text>
+        </g>
+        
+        <g transform="translate(310, 0)">
+          <rect width="145" height="60" rx="8" fill="#0f172a" stroke="#1e293b"/>
+          <text x="14" y="24" fill="#64748b" font-family="monospace" font-size="10">SENSORS</text>
+          <text x="14" y="48" fill="#ef4444" font-family="-apple-system, sans-serif" font-size="14" font-weight="700">VL53L0X ToF</text>
+        </g>
+        
+    </g>
+
+    <!-- Detailed Highlights -->
+    <g transform="translate(0, 255)">
+      <text x="0" y="0" fill="#3b82f6" font-family="monospace" font-size="11" font-weight="700">CORE SYSTEM ARCHITECTURE:</text>
+      
+        <text x="0" y="22" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">● Complete physical chassis engineering with high-durabilit...</text>
+        
+        <text x="0" y="42" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">● Dual ToF laser rangefinders operating in sub-millimeter p...</text>
+        
+        <text x="0" y="62" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="12">● Real-time C MiniOS firmware orchestrating PWM motor traction</text>
+        
+    </g>
+  </g>
+
+  <!-- Right Column: Bespoke Visual Representation -->
+  <g transform="translate(680, 50)">
     
-    <!-- Header -->
-    <rect x="0" y="0" width="800" height="60" rx="15" fill="#161B22"/>
-    <text x="50" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#58A6FF">MINISUMO_ROBOT</text>
-    <line x1="0" y1="60" x2="800" y2="60" stroke="#30363D" stroke-width="2"/>
-    
-    <!-- Description -->
-    <text x="50" y="120" font-family="Arial, sans-serif" font-size="16" fill="#8B949E">Minisumo_Robot_Examples</text>\n
-    
-    <!-- Footer -->
-    <line x1="50" y1="230" x2="750" y2="230" stroke="#30363D" stroke-width="1"/>
-    
-    <!-- Language -->
-    <circle cx="60" cy="260" r="8" fill="#F1E05A"/>
-    <text x="80" y="265" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#C9D1D9">C</text>
-    
-    <!-- Stars -->
-    <text x="200" y="265" font-family="Arial, sans-serif" font-size="16" fill="#8B949E">⭐ Stars: 1</text>
-    
-    <!-- Forks -->
-    <text x="320" y="265" font-family="Arial, sans-serif" font-size="16" fill="#8B949E">🍴 Forks: 0</text>
-    
-    <!-- Developer -->
-    <text x="650" y="265" font-family="Arial, sans-serif" font-size="14" fill="#8B949E">by @Alttrest</text>
+        <g transform="translate(60, 20)">
+          <!-- Sensing Cones -->
+          <polygon points="150,190 100,50 150,50" fill="#ef4444" opacity="0.2"/>
+          <polygon points="210,190 210,50 260,50" fill="#ef4444" opacity="0.2"/>
+          <line x1="150" y1="190" x2="125" y2="50" stroke="#ef4444" stroke-width="1.5"/>
+          <line x1="210" y1="190" x2="235" y2="50" stroke="#ef4444" stroke-width="1.5"/>
+          <text x="125" y="40" fill="#ef4444" font-family="monospace" font-size="9" text-anchor="middle">TOF 142mm</text>
+          <text x="235" y="40" fill="#ef4444" font-family="monospace" font-size="9" text-anchor="middle">TOF 195mm</text>
+
+          <!-- Robot Chassis (10x10 cm standard) -->
+          <g transform="translate(110, 180)">
+            <rect x="0" y="0" width="140" height="110" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+            <polygon points="0,0 140,0 130,-14 10,-14" fill="#0f172a" stroke="#ef4444" stroke-width="2"/>
+            <text x="70" y="-4" fill="#ef4444" font-family="monospace" font-size="8" text-anchor="middle" font-weight="700">SHARP STEEL WEDGE</text>
+
+            <rect x="-16" y="20" width="14" height="70" rx="3" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+            <rect x="142" y="20" width="14" height="70" rx="3" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+
+            <circle cx="70" cy="45" r="14" fill="#0f172a" stroke="#22c55e" stroke-width="1.5"/>
+            <text x="70" y="49" fill="#22c55e" font-family="monospace" font-size="9" text-anchor="middle" font-weight="700">MCU</text>
+            <line x1="70" y1="60" x2="70" y2="85" stroke="#22c55e" stroke-width="1.5"/>
+            <circle cx="50" cy="85" r="7" fill="#0f172a" stroke="#38bdf8"/>
+            <circle cx="90" cy="85" r="7" fill="#0f172a" stroke="#38bdf8"/>
+          </g>
+        </g>
+        
+  </g>
+
+  <!-- Bottom Bar -->
+  <g transform="translate(60, 515)">
+    <line x1="0" y1="0" x2="1080" y2="0" stroke="#1e293b" stroke-width="1"/>
+    <text x="0" y="22" fill="#64748b" font-family="monospace" font-size="11">REPOSITORY: Alttrest/MINISUMO_ROBOT</text>
+    <text x="400" y="22" fill="#64748b" font-family="monospace" font-size="11">MAINTAINER: Ali Turan (@Alttrest)</text>
+    <text x="960" y="22" fill="#3b82f6" font-family="monospace" font-size="11">● PRODUCTION VERIFIED</text>
+  </g>
 </svg>
